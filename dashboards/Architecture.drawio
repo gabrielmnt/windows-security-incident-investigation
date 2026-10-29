@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="2qWLLWIbKatVOhkzSxhz">
+    <mxGraphModel dx="1704" dy="946" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Qi3DTWzju-SzINM6INij-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font style=&quot;font-size: 26px; color: rgb(107, 122, 107);&quot;&gt;&lt;b&gt;TCP 9997&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="150" x="350" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-6" edge="1" parent="1" source="Qi3DTWzju-SzINM6INij-11" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#39D353;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=classic;fillColor=light-dark(#39D353,#39D353);gradientColor=light-dark(#000000,#1A4D2E);startFill=0;" target="Qi3DTWzju-SzINM6INij-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Qi3DTWzju-SzINM6INij-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font style=&quot;font-size: 26px; color: rgb(107, 122, 107);&quot;&gt;Receving | Indexing | Searching&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="375" x="237.5" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-2" edge="1" parent="1" source="DlYdaclU0pmPrOdzzn14-1" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#39D353;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=classic;fillColor=light-dark(#39D353,#39D353);gradientColor=light-dark(#000000,#1A4D2E);startFill=0;" target="DlYdaclU0pmPrOdzzn14-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DlYdaclU0pmPrOdzzn14-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;b style=&quot;color: light-dark(rgb(126, 139, 126), rgb(165, 186, 165));&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Host Machine -&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Windows 10&lt;/span&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="360" x="245" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DlYdaclU0pmPrOdzzn14-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font style=&quot;font-size: 26px; color: rgb(107, 122, 107);&quot;&gt;&lt;b&gt;Splunk Enterprise&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="240" x="305" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-12" edge="1" parent="1" source="H-nwBcx5--cxRUUiA-qU-10" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#39D353;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=classic;fillColor=light-dark(#39D353,#39D353);gradientColor=light-dark(#000000,#1A4D2E);startFill=0;" target="H-nwBcx5--cxRUUiA-qU-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font color=&quot;#7e8b7e&quot;&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Forwarder Windows Event Logs | Sysmon Events&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="602.5" x="123.75" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-16" edge="1" parent="1" source="H-nwBcx5--cxRUUiA-qU-11" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#39D353;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=classic;fillColor=light-dark(#39D353,#39D353);gradientColor=light-dark(#000000,#1A4D2E);startFill=0;" target="H-nwBcx5--cxRUUiA-qU-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;b style=&quot;color: light-dark(rgb(126, 139, 126), rgb(165, 186, 165));&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Virtual Machine -&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;SOC-WIN10&lt;/span&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="405" x="223" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font color=&quot;#717c71&quot;&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;&lt;b&gt;Windows Event Logs&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="360" x="245" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-19" edge="1" parent="1" source="H-nwBcx5--cxRUUiA-qU-15" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#39D353;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=classic;fillColor=light-dark(#39D353,#39D353);gradientColor=light-dark(#000000,#1A4D2E);startFill=0;" target="H-nwBcx5--cxRUUiA-qU-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font color=&quot;#7e8b7e&quot;&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Security | System | Application&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="393.12" x="228.44" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font color=&quot;#717c71&quot;&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;&lt;b&gt;Sysmon&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="115" x="367.5" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-22" edge="1" parent="1" source="H-nwBcx5--cxRUUiA-qU-18" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#39D353;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=classic;fillColor=light-dark(#39D353,#39D353);gradientColor=light-dark(#000000,#1A4D2E);startFill=0;" target="H-nwBcx5--cxRUUiA-qU-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font color=&quot;#7e8b7e&quot;&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Detailed System And process telemetry&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="482.5" x="183.75" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font color=&quot;#717c71&quot;&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;&lt;b&gt;Splunlk Universal Forwarder&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="360" x="245" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="H-nwBcx5--cxRUUiA-qU-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font color=&quot;#7e8b7e&quot;&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Collects And Forwards Configured events&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="482.5" x="183.75" y="960" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
