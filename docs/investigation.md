@@ -32,7 +32,7 @@ The first step was therefore to identify the failed authentication events and es
 
 ### SPL Query
 
-```
+```spl
 index=main host="SOC-WIN10" EventCode=4625
 | rex field=Message "Account Name:\s+(?<FailedAccount>\S+)"
 | rex field=Message "Source Network Address:\s+(?<SourceIP>\S+)"
@@ -44,13 +44,13 @@ index=main host="SOC-WIN10" EventCode=4625
 
 ### Findings
 
-The final investigation identified `<NUMBER>` failed authentication attempts between `<FIRST_FAILED_TIMESTAMP>` and `<LAST_FAILED_TIMESTAMP>`.
+The final investigation identified five failed authentication attempts between 18:31:12.896 and 18:31:24.437.
 
-The events originated from `<SOURCE_IP>` and used Logon Type `<LOGON_TYPE>`.
+The events originated from `127.0.0.1` and used Logon Type `2 (Interactive)`.
 
 The recorded failure reason was:
 
-`<FAILURE_REASON>`
+`Unknown user name or bad password`
 
 The available telemetry did not establish which process initiated these authentication attempts.
 
@@ -72,7 +72,7 @@ Because Sysmon events were stored as XML in the `_raw` field, the relevant field
 
 ### SPL Query
 
-```
+```spl
 index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
 | rex field=_raw "<EventID>(?<EventID>\d+)</EventID>"
 | rex field=_raw "<Data Name='Image'>(?<Image>[^<]+)</Data>"
@@ -108,7 +108,7 @@ Sysmon process creation telemetry can then be correlated with the Security event
 
 ### SPL Query
 
-```
+```spl
 index=main host="SOC-WIN10" EventCode=4720
 | rex field=Message "New Account:\s+Security ID:\s+.*?\s+Account Name:\s+(?<CreatedUser>\S+)"
 | table _time host Account_Name CreatedUser Message
@@ -117,7 +117,7 @@ index=main host="SOC-WIN10" EventCode=4720
 
 ### Findings
 
-At `<ACCOUNT_CREATION_TIMESTAMP>`, Windows Security Event ID 4720 confirmed the creation of the local `helpdesk` account.
+At `18:40:10.650 on October 7, 2026`, Windows Security Event ID 4720 confirmed the creation of the local `helpdesk` account.
 
 Sysmon process creation telemetry showed the execution of:
 
@@ -143,7 +143,7 @@ Windows Security Event ID 4732 records membership changes involving security-ena
 
 ### SPL Query
 
-```
+```spl
 index=main host="SOC-WIN10" EventCode=4732
 | table _time host Account_Name Message
 | sort _time
@@ -153,7 +153,7 @@ index=main host="SOC-WIN10" EventCode=4732
 
 The following query was used to identify the process responsible for the privilege assignment:
 
-```
+```spl
 index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
 | rex field=_raw "<EventID>(?<EventID>\d+)</EventID>"
 | rex field=_raw "<Data Name='CommandLine'>(?<CommandLine>[^<]+)</Data>"
@@ -165,7 +165,7 @@ index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 ### Findings
 
-At `<PRIVILEGE_ASSIGNMENT_TIMESTAMP>`, Sysmon recorded the execution of:
+At `18:40:48.727 on October 7, 2026`, Sysmon recorded the execution of:
 
 `net localgroup Administrators helpdesk /add`
 
@@ -189,7 +189,7 @@ After confirming the creation and privilege assignment of the `helpdesk` account
 
 ### Successful Logon Search
 
-```
+```spl
 index=main EventCode=4624
 | search Account_Name="helpdesk"
 | table _time host Account_Name Logon_Type Authentication_Package Source_Network_Address
@@ -198,7 +198,7 @@ index=main EventCode=4624
 
 ### Failed Logon Search
 
-```
+```spl
 index=main EventCode=4625
 | search Account_Name="helpdesk"
 | table _time host Account_Name Logon_Type Authentication_Package Source_Network_Address Failure_Reason
@@ -207,7 +207,7 @@ index=main EventCode=4625
 
 ### Process Activity Search
 
-```
+```spl
 index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
 | rex field=_raw "<EventID>(?<EventID>\d+)</EventID>"
 | rex field=_raw "<Data Name='Image'>(?<Image>[^<]+)</Data>"
